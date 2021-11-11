@@ -1,13 +1,20 @@
 accelerator:
   displayName: dotnet-core-tilt
   description: Sample .Net Core Application with Tilt Integration
-  iconUrl: https://raw.githubusercontent.com/simple-starters/icons/master/icon-tanzu-light.png
-  tags: []
+  iconUrl: https://seeklogo.com/images/C/c-sharp-c-logo-02F17714BA-seeklogo.com.png
+  tags:
+  - dotnet
+  - C#
   options:
   - name: repositoryPrefix
     inputType: text
     label: Prefix for the container image repository
     defaultValue: your-registry.io/project
+    required: true
+  - name: gitRepository
+    inputType: text
+    label: Git Repository this artifact will be stored in. 
+    defaultValue: https://github.com/jeffellin/tanzu-dotnet-accelerator
     required: true
 engine:
   merge:
@@ -15,6 +22,10 @@ engine:
     exclude: [ "config/*.yaml", "Tiltfile", "README.md", "catalog/*.yaml" ]
   - include: [ "config/*.yaml", "Tiltfile" ]
     chain:
+    - type: ReplaceText
+      substitutions:
+      - text: https://github.com
+        with: "#gitRepository"
     - type: ReplaceText
       substitutions:
       - text: tanzu-dotnet
