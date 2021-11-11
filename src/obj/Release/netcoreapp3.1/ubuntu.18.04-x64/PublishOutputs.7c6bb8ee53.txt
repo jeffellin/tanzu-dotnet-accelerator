@@ -1,0 +1,9 @@
+/Users/jellin/Downloads/Sample/build/Sample
+/Users/jellin/Downloads/Sample/build/app.config
+/Users/jellin/Downloads/Sample/build/appsettings.Development.json
+/Users/jellin/Downloads/Sample/build/appsettings.json
+/Users/jellin/Downloads/Sample/build/Sample.dll
+/Users/jellin/Downloads/Sample/build/Sample.deps.json
+/Users/jellin/Downloads/Sample/build/Sample.runtimeconfig.json
+/Users/jellin/Downloads/Sample/build/Sample.dll.config
+/Users/jellin/Downloads/Sample/build/Sample.pdb

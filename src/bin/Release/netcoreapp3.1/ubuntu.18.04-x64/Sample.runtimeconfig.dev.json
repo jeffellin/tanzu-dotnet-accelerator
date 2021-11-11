@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "/Users/jellin/.dotnet/store/|arch|/|tfm|",
+      "/Users/jellin/.nuget/packages"
+    ]
+  }
+}
