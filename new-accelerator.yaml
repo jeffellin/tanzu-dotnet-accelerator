@@ -1,0 +1,13 @@
+accelerator:
+  displayName: dotnet-core-tilt
+  description: Sample .Net Core Application with Tilt Integration
+  iconUrl: https://raw.githubusercontent.com/simple-starters/icons/master/icon-tanzu-light.png
+  tags: []
+  options:
+  - name: optionName
+    label: Nice Label
+    display: true
+    defaultValue: ""
+engine:
+  include:
+  - '**'
