@@ -19,7 +19,7 @@ accelerator:
 engine:
   merge:
   - include: [ "**/*" ]
-    exclude: [ "config/*.yaml", "Tiltfile", "README.md", "catalog/*.yaml" ]
+    exclude: [ "k8s-resource.yaml","config/*.yaml", "Tiltfile", "README.md", "catalog/*.yaml" ]
   - include: [ "config/*.yaml", "Tiltfile" ]
     chain:
     - type: ReplaceText
