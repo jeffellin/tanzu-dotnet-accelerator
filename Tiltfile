@@ -1,7 +1,7 @@
 load('.tanzu/tanzu_tilt_extensions.py', 'tanzu_k8s_yaml')
 
 
-SOURCE_IMAGE = os.getenv("SOURCE_IMAGE", default='your-registry.io/project')
+SOURCE_IMAGE = os.getenv("SOURCE_IMAGE", default='your-registry.io/project/tanzu-dotnet')
 LOCAL_PATH = os.getenv("LOCAL_PATH", default='.')
 
 local_resource(
@@ -11,7 +11,7 @@ local_resource(
       ignore=['src/bin','src/obj']
 )
 
-custom_build('your-registry.io/project',
+custom_build('your-registry.io/project/tanzu-dotnet',
     "tanzu apps workload apply -f config/workload.yaml --live-update \
       --local-path " + LOCAL_PATH + " --source-image " + SOURCE_IMAGE + " --yes && \
     .tanzu/wait.sh tanzu-dotnet",
@@ -23,5 +23,4 @@ custom_build('your-registry.io/project',
   skips_local_docker=True
   
 )
-allow_k8s_contexts('tap-beta3-admin@tap-beta3')
-tanzu_k8s_yaml('tanzu-dotnet', 'your-registry.io/project', './config/workload.yaml')
+tanzu_k8s_yaml('tanzu-dotnet', 'your-registry.io/project/tanzu-dotnet', './config/workload.yaml')
